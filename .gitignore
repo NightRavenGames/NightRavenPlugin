@@ -1,0 +1,8 @@
+Binaries/
+Intermediate/
+*.pdb
+*.dll
+*.lib
+*.exp
+*.obj
+*.sarif

@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "NightRavenGames",
+	"Description": "NightRavens Official Plugin that is made and developed to store internal C++ functionaliy, 3d models, bluepritns and assets between projects for faster workflows, recycling of work in other projects in order to prototype faster in the future.",
+	"Category": "Other",
+	"CreatedBy": "Marcus & Marco",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "NightRavenGames",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
