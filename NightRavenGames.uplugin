@@ -19,6 +19,21 @@
 			"Name": "NightRavenGames",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "HelperFunctions",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "AI",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Multiplayer",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	]
 }
