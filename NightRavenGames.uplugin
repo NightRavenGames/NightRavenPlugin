@@ -44,4 +44,10 @@
 			]
 		}
 	]
+		"Plugins": [
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		}
+	]
 }
