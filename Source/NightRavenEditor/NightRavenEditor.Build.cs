@@ -23,9 +23,6 @@ public class NightRavenEditor : ModuleRules
 
         PublicIncludePaths.AddRange(new string[]
         {
-            "NightRavenEditor/DataValidator",
-            "NightRavenEditor/LevelWidget",
-            "NightRavenEditor/DeveloperSettings"
             
         });
 
