@@ -42,6 +42,11 @@
 			"AdditionalDependencies": [
 				"DataValidation"
 			]
+		},
+		{
+			"Name": "CustomBlockouts",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		}
 	],
 		"Plugins": [
