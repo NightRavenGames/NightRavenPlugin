@@ -10,16 +10,21 @@ public class BackroomsCamera : ModuleRules
             new string[]
             {
                 "Core",
+                "CoreUObject",
+                "Engine",
+                "Slate",
+                "SlateCore",
+                "EnhancedInput",
+                "RenderCore",
+                "RHI",
+                "ImageWrapper"
             }
         );
 
         PrivateDependencyModuleNames.AddRange(
             new string[]
             {
-                "CoreUObject",
-                "Engine",
-                "Slate",
-                "SlateCore"
+
             }
         );
     }
