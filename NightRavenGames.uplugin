@@ -47,9 +47,14 @@
 			"Name": "CustomBlockouts",
 			"Type": "Editor",
 			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name": "BackroomsCamera",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
-		"Plugins": [
+	"Plugins": [
 		{
 			"Name": "GameplayAbilities",
 			"Enabled": true
