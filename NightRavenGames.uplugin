@@ -31,6 +31,11 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "GAS",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "Multiplayer",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"

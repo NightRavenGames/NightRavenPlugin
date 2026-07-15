@@ -23,8 +23,14 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly)
 	UBaseAbilitySystemComponent* AbilitySystemComponent;
-
+	
+	UPROPERTY(EditDefaultsOnly)
+	TArray<TSubclassOf<UAttributeSet>> AttributeSets;
+	
+	
 public:
 	// Called every frame
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override {return AbilitySystemComponent;};
+	
+	virtual void BeginPlay() override;
 };
