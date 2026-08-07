@@ -3,6 +3,9 @@
 
 #include "GASPlayerState.h"
 
+#include "BaseAttributeSet.h"
+
+
 
 AGASPlayerState::AGASPlayerState()
 {
@@ -11,13 +14,23 @@ AGASPlayerState::AGASPlayerState()
 
 void AGASPlayerState::BeginPlay()
 {
-	Super::BeginPlay();
+	TArray<TSubclassOf<UAttributeSet>> AttributeSetsArray;
+	TArray<UDataTable*> DataTables;
+	AttributeSets.GetKeys(AttributeSetsArray);
+	
 	if (AttributeSets.Num()>0)
-		for (auto Set : AttributeSets)
+		for (int i=0;i<AttributeSets.Num();i++)
 		{
-			UAttributeSet* CreatedAttributeSet = NewObject<UAttributeSet>(AbilitySystemComponent, Set);
+			UAttributeSet* CreatedAttributeSet = NewObject<UAttributeSet>(this, AttributeSetsArray[i]);
+			
+			if (AttributeSets.Find(AttributeSetsArray[i]) != nullptr)
+				CreatedAttributeSet->InitFromMetaDataTable(*AttributeSets.Find(AttributeSetsArray[i]));
+			
 			AbilitySystemComponent->AddSpawnedAttribute(CreatedAttributeSet);
 		}
+	
+	
+	Super::BeginPlay();
 			
 		
 			

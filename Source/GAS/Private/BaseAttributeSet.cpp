@@ -2,6 +2,8 @@
 
 
 #include "BaseAttributeSet.h"
+#include "Net/UnrealNetwork.h"
+
 UBaseAttributeSet::UBaseAttributeSet()
 {
 	
@@ -13,6 +15,7 @@ void UBaseAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, 
 	//Clamping new Health value to MaxHealth
 	if (Attribute==GetHealthAttribute())
 		NewValue = FMath::Clamp(NewValue, 0.0f, GetMaxHealth());
+	
 }
 
 void UBaseAttributeSet::OnRep_Health(const FGameplayAttributeData& OldHealth)
@@ -34,4 +37,6 @@ void UBaseAttributeSet::OnRep_MovementSpeed(const FGameplayAttributeData& OldMov
 void UBaseAttributeSet::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME_CONDITION_NOTIFY(UBaseAttributeSet, Health, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UBaseAttributeSet, MaxHealth, COND_None, REPNOTIFY_Always);
 }

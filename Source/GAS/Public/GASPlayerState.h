@@ -25,7 +25,7 @@ protected:
 	UBaseAbilitySystemComponent* AbilitySystemComponent;
 	
 	UPROPERTY(EditDefaultsOnly)
-	TArray<TSubclassOf<UAttributeSet>> AttributeSets;
+	TMap<TSubclassOf<UAttributeSet>,UDataTable*> AttributeSets;
 	
 	
 public:

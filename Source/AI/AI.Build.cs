@@ -10,6 +10,7 @@ public class AI : ModuleRules
             new string[]
             {
                 "Core",
+                "AIModule"
             }
         );
 
@@ -19,7 +20,9 @@ public class AI : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "Slate",
-                "SlateCore"
+                "SlateCore",
+                "AIModule"
+                
             }
         );
     }
