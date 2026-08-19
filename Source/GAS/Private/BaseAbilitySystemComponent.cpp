@@ -2,7 +2,7 @@
 
 
 #include "BaseAbilitySystemComponent.h"
-
+#include "Networking.h"
 
 // Sets default values for this component's properties
 UBaseAbilitySystemComponent::UBaseAbilitySystemComponent()
@@ -13,5 +13,24 @@ UBaseAbilitySystemComponent::UBaseAbilitySystemComponent()
 	SetIsReplicated(true);
 	UAbilitySystemComponent::SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 	// ...
+}
+
+void UBaseAbilitySystemComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	if (!IsOwnerActorAuthoritative()) return;
+	
+	
+	if (StartingAbilities.Num()>0)
+	{
+		for (auto Ability : StartingAbilities)
+			if (IsValid(Ability))
+			{
+				GiveAbility(Ability);
+				GEngine->AddOnScreenDebugMessage(-1,5.0f,FColor::White,"AbilityAdded");
+			}
+			
+		
+	}
 }
 

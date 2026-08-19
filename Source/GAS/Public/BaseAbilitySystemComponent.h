@@ -16,4 +16,8 @@ public:
 	// Sets default values for this component's properties
 	UBaseAbilitySystemComponent();
 	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite)
+	TArray<TSubclassOf<UGameplayAbility>> StartingAbilities;
+	
+	virtual void BeginPlay() override;
 };

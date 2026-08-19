@@ -59,9 +59,9 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "IconCreator",
-			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit"
+			"Name": "Utilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
